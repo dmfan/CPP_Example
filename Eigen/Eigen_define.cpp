@@ -10,6 +10,7 @@ using namespace Eigen;
 
 int main()
 {
+
     Eigen::MatrixXd m(2,2);             //声明一个MatrixXd类型的变量，它是2*2的矩阵，未初始化
     m(0,0) = 3;                         //将矩阵第1个元素初始化3
     m(1,0) = 2.5;                       //将矩阵第3个元素初始化2.5
@@ -48,7 +49,13 @@ int main()
     jv = C.diagonal(); 
     std::cout << "jvjvjv--jv=" << std::endl << jv << std::endl << std::endl;
 
+//--------------分割线----------
+    Eigen::Vector3d gaitCommand;
+    gaitCommand[0] = 5;
+    gaitCommand[1] = 6;
+    gaitCommand[2] = 7;
 
+    std::cout << "gaitCommand:" << gaitCommand.transpose() << std::endl;
 
     system("pause");
     return 0;
